@@ -18,12 +18,6 @@ class Navi < Formula
     system "cargo", "install", "--locked", "--root", prefix, "--path", "."
   end
 
-  def caveats
-    <<~EOS
-      For upgrade instructions and configuring the shell widget: https://github.com/denisidoro/navi/issues/201
-    EOS
-  end
-
   test do
     assert_match "navi " + version, shell_output("#{bin}/navi --version")
     (testpath/"cheats/test.cheat").write "% test\n\n# foo\necho bar\n\n# lorem\necho ipsum\n"
