@@ -1,8 +1,8 @@
 class Navi < Formula
   desc "Interactive cheatsheet tool for the command-line"
   homepage "https://github.com/denisidoro/navi"
-  url "https://github.com/denisidoro/navi/archive/v2.4.1.tar.gz"
-  sha256 "3268317a09372f435a08c8eb5f62c44f2a070f195482b5e4584a9761a7edadd4"
+  url "https://github.com/denisidoro/navi/archive/v2.5.0.tar.gz"
+  sha256 "36e8a144ec7be5684bb0731c310071b018991a5e327360791e4c849fae2422c3"
 
   bottle do
     cellar :any_skip_relocation
@@ -13,6 +13,7 @@ class Navi < Formula
 
   depends_on "rust" => :build
   depends_on "fzf"
+  depends_on "git"
 
   def install
     system "cargo", "install", "--locked", "--root", prefix, "--path", "."
